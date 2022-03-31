@@ -1,19 +1,20 @@
+import config from './assets/config'
 export default {
     // Target: https://go.nuxtjs.dev/config-target
     target: 'static',
 
     // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
-        title: 'Feuchte Tube - dein Sender für kostenlose Pornos',
+        title: config.meta.title,
         htmlAttrs: {
-            lang: 'de'
+            lang: config.meta.htmlLang
         },
         meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-            { hid: 'description', name: 'description', content: 'Dein kostenloser feuchter Porno-Sender. Feuchte Girls rund um die Uhr. Schalte gratis ein und finde dein tabuloses feuchtes Mädchen. Amateur Porno aus Deutschland.' },
+            { hid: 'description', name: 'description', content: config.meta.metaDescription },
             { name: 'format-detection', content: 'telephone=no' },
-            { hid: 'keywords', name: 'keywords', content: 'tube, youporn, pornhub, cliphunter, red tube, xxx, porn, xvideos' },
+            { hid: 'keywords', name: 'keywords', content: config.meta.keywords },
             { hid: 'rating', name: 'RATING', content: 'RTA-5042-1996-1400-1577-RTA' }
         ],
         link: [
@@ -70,13 +71,13 @@ export default {
     },
 
     env: {
-        baseURL: (process.env.NODE_ENV === 'production' ? 'https://feuchtetube.net' : 'http://localhost:3000')
+        baseURL: (process.env.NODE_ENV === 'production' ? config.baseURL : 'http://localhost:3000')
     },
 
     // @nuxtjs/sitemap configuration
     sitemap: {
         gzip: true,
-        hostname: 'https://feuchtetube.net',
+        hostname: config.baseURL,
         routes: [],
         trailingSlash: true,
         exclude: [

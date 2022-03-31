@@ -67,9 +67,10 @@ export default {
     };
   },
   async asyncData({ route, $axios, store }) {
-    const video = await $axios.$get(
-      `${store.state.apiUrl}/video/slug?slug=${route.params.id}`
-    );
+    const videoId = route.params.id;
+    const url = store.state.apiUrl + "/video/slug";
+    const params = { videoId };
+    const video = await $axios.$get(url, { params });
     return {
       video: video.item,
       title: video.item.germanTitle,

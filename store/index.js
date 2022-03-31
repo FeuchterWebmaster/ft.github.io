@@ -1,9 +1,11 @@
+import config from '../assets/config'
+
 export const state = () => ({
-    siteName: 'Feuchte Tube',
-    limit: 80, // number of videos shown per page
+    siteName: config.siteName,
+    limit: config.videos.limit, // number of videos shown per page
     apiUrl: 'http://localhost:3001',
-    includeTags: ['german'],
-    excludeTags: ['gay']
+    includeTags: config.tags.includeTags,
+    excludeTags: config.tags.excludeTags
 })
 
 export const mutations = () => ({

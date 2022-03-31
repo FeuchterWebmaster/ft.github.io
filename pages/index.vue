@@ -103,17 +103,7 @@
 <script>
 export default {
   name: "index",
-  head: {
-    title: "Feuchte Tube - dein Sender für kostenlose Pornos",
-    meta: [
-      {
-        hid: "description",
-        name: "description",
-        content:
-          "Dein kostenloser feuchter Porno-Sender. Feuchte Girls rund um die Uhr. Schalte gratis ein und finde dein tabuloses feuchtes Mädchen. Amateur Porno aus Deutschland.",
-      },
-    ],
-  },
+  head: {},
   data: () => ({}),
   async asyncData({ $axios, store }) {
     const includeTags = store.state.includeTags;
