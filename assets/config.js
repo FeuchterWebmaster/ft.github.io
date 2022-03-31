@@ -16,11 +16,27 @@ const config = {
         limit: 80
     },
     categories: [
+        { name: 'Abspritzen', tag: 'cumshot', title: 'Abspritzen Pornos' },
         { name: 'Amateur', tag: 'amateur', title: 'Amateur Pornos' },
-        { name: 'Teens', tag: 'teen', title: 'Teen Pornos' },
-        { name: 'Mütter', tag: 'milf', title: 'Mutter Pornos' },
-        { name: 'Anal', tag: 'anal', title: 'Anal Pornos' },
+        { name: 'Arschficken', tag: 'anal', title: 'Arschfick Pornos' },
+        { name: 'Blasen', tag: 'blowjob', title: 'Blasen Pornos' },
+        { name: 'Blondinen', tag: 'blonde', title: 'Blondinen Pornos' },
+        { name: 'Dildo', tag: 'dildo', title: 'Dildo Pornos' },
         { name: 'Dreier', tag: 'threesome', title: 'Dreier Pornos' },
+        { name: 'Fetisch', tag: 'fetish', title: 'Fetisch Pornos' },
+        { name: 'Hardcore', tag: 'hardcore', title: 'Hardcore Pornos' },
+        { name: 'Lesben', tag: 'lesbian', title: 'Lesben Pornos' },
+        { name: '18 Jahre alt', tag: 'teen', title: 'Pornos mit 18 jährigen' },
+        { name: 'Mütter', tag: 'milf', title: 'Mutter Pornos' },
+        { name: 'Mollige Frauen', tag: 'chubby', title: 'Mollige Frauen Pornos' },
+        { name: 'Orgien', tag: 'orgie', title: 'Orgien Pornos' },
+        { name: 'Orgien', tag: 'orgie', title: 'Orgien Pornos' },
+        { name: 'Pornostars', tag: 'pornstar', title: 'Pornos mit Pornostars' },
+        { name: 'Runterholen', tag: 'jerk', title: 'Runterholen Pornos' },
+        { name: 'Selbstbefriedigung', tag: 'masturbation', title: 'Selbstbefriedigung Pornos' },
+        { name: 'Strippen', tag: 'striptease', title: 'Strip Pornos' },
+        { name: 'Titten', tag: 'big-tits', title: 'Titten Pornos' },
+
     ]
 }
 
