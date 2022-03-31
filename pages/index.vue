@@ -2,7 +2,11 @@
   <div>
     <div class="container-fluid mt-5 px-4">
       <div class="row">
-        <div class="col-md-1" v-for="video in videos" :key="video._id">
+        <div
+          class="col-xl-1 col-lg-2 col-md-4 col-sm-4"
+          v-for="(video, id) in videos"
+          :key="id"
+        >
           <VideoThumb :video="video" />
         </div>
       </div>
@@ -101,16 +105,18 @@
 </template>
 
 <script>
+import config from "~/assets/config";
+
 export default {
   name: "index",
   head: {},
   data: () => ({}),
   async asyncData({ $axios, store }) {
-    const includeTags = store.state.includeTags;
-    const excludeTags = store.state.excludeTags;
+    const includeTags = config.tags.includeTags;
+    const excludeTags = config.tags.excludeTags;
     const skip = 0;
-    const limit = store.state.limit;
-    const url = store.state.apiUrl + "/videos";
+    const limit = config.videos.limit;
+    const url = config.apiUrl + "/videos";
     const params = {
       includeTags,
       excludeTags,
@@ -119,7 +125,7 @@ export default {
     };
     // const url = `${url}/videos?tag=${mainTag}&skip=${skip}&limit=${limit}`
     const data = await $axios.$get(url, { params });
-    const nextPage = data.videos.length === store.state.limit;
+    const nextPage = data.videos.length === config.videos.limit;
     const videos = nextPage ? data.videos.slice(0, -1) : data.videos;
     return {
       videos,

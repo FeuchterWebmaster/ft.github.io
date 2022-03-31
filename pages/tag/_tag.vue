@@ -5,7 +5,11 @@
         <h1>{{ tag }} Pornos - Seite 1</h1>
       </div>
       <div class="row">
-        <div class="col-md-1" v-for="video in videos" :key="video._id">
+        <div
+          class="col-xl-1 col-lg-2 col-md-4 col-sm-4"
+          v-for="(video, id) in videos"
+          :key="id"
+        >
           <VideoThumb :link="video._id" :video="video" />
         </div>
       </div>
@@ -28,6 +32,8 @@
 </template>
 
 <script>
+import config from "~/assets/config";
+
 export default {
   name: "tag",
   data: () => ({}),
@@ -44,13 +50,13 @@ export default {
     };
   },
   async asyncData({ $axios, store, route }) {
-    const includeTags = store.state.includeTags;
-    const excludeTags = store.state.excludeTags;
+    const includeTags = config.tags.includeTags;
+    const excludeTags = config.tags.excludeTags;
     const tag = route.params.tag;
     includeTags.push(tag);
     const skip = 0;
-    const limit = store.state.limit;
-    const url = store.state.apiUrl + "/videos";
+    const limit = config.videos.limit;
+    const url = config.apiUrl + "/videos";
     const params = {
       includeTags,
       excludeTags,
@@ -58,7 +64,7 @@ export default {
       limit,
     };
     const data = await $axios.$get(url, { params });
-    const nextPage = data.videos.length === store.state.limit;
+    const nextPage = data.videos.length === config.videos.limit;
     const videos = nextPage ? data.videos.slice(0, -1) : data.videos;
     return {
       videos,

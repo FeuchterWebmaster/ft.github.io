@@ -1,6 +1,7 @@
 const config = {
     baseURL: "https://feuchtetube.net",
     siteName: "Feuchte Tube",
+    apiUrl: "http://localhost:3001",
     meta: {
         htmlLang: "de",
         title: "Feuchte Tube - dein Sender für kostenlose Pornos",
@@ -13,7 +14,14 @@ const config = {
     },
     videos: {
         limit: 80
-    }
+    },
+    categories: [
+        { name: 'Amateur', tag: 'amateur', title: 'Amateur Pornos' },
+        { name: 'Teens', tag: 'teen', title: 'Teen Pornos' },
+        { name: 'Mütter', tag: 'milf', title: 'Mutter Pornos' },
+        { name: 'Anal', tag: 'anal', title: 'Anal Pornos' },
+        { name: 'Dreier', tag: 'threesome', title: 'Dreier Pornos' },
+    ]
 }
 
 module.exports = config

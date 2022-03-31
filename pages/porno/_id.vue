@@ -14,8 +14,8 @@
             ></iframe>
           </div>
           <nuxt-link
-            v-for="tag in video.tags"
-            :key="tag"
+            v-for="(tag, id) in video.tags"
+            :key="id"
             :to="`/tag/${tag}/`"
             :title="`${tag} Pornos`"
           >
@@ -46,6 +46,8 @@ a {
 
 
 <script>
+import config from "~/assets/config";
+
 export default {
   name: "pornoVideo",
   head() {
@@ -68,13 +70,13 @@ export default {
   },
   async asyncData({ route, $axios, store }) {
     const videoId = route.params.id;
-    const url = store.state.apiUrl + "/video/slug";
+    const url = config.apiUrl + "/video/slug";
     const params = { videoId };
     const video = await $axios.$get(url, { params });
     return {
       video: video.item,
       title: video.item.germanTitle,
-      siteName: store.state.siteName,
+      siteName: config.siteName,
     };
   },
 };

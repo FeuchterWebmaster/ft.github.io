@@ -1,35 +1,83 @@
 <template>
   <div>
-    <nav class="navbar navbar-light bg-light pb-5">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <NuxtLink
-          to="/"
-          class="navbar-brand"
-          title="Feuchte Tube - dein Sender für kostenlose Pornos"
+        <nuxt-link class="navbar-brand" to="/">
+          <img class="logo" src="/images/ft.png" :alt="siteName" />
+        </nuxt-link>
+        <button
+          class="navbar-toggler ms-auto"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-          <img
-            src="/images/FeuchteTubeLogo.gif"
-            alt="Feuchte Tube - Deutsche Pornos"
-            class="brand d-inline-block align-text-top"
-          />
-        </NuxtLink>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link h3" aria-current="page" href="#">Start</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link h3" href="#">Kategorien</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link h3" href="#">Pornostars</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle h3"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Kategorien
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li><a href="" class="dropdown-item h3">Alle</a></li>
+                <li v-for="(category, id) in categories" :key="id">
+                  <nuxt-link
+                    class="dropdown-item h3"
+                    :to="`/tag/${category.tag}/`"
+                    :title="category.title"
+                    >{{ category.name }}</nuxt-link
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   </div>
 </template>
 
-<style scoped>
-.navbar {
-  position: relative;
-}
-.brand {
-  width: 20vh;
-  position: absolute;
-  left: 50%;
-  margin-left: -50px !important;
-  display: block;
-}
+<script>
+import config from "~/assets/config.js";
 
+export default {
+  name: "Header",
+  data: () => ({
+    siteName: config.siteName,
+    categories: config.categories,
+  }),
+};
+</script>
+
+
+<style scoped>
+.logo {
+  width: 50%;
+  height: auto;
+}
 .nuxt-link-active {
   color: red;
 }

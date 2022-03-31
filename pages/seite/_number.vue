@@ -7,7 +7,11 @@
         </div>
       </div> -->
       <div class="row">
-        <div class="col-md-1" v-for="video in videos" :key="video._id">
+        <div
+          class="col-xl-1 col-lg-2 col-md-4 col-sm-4"
+          v-for="video in videos"
+          :key="video._id"
+        >
           <VideoThumb :link="video._id" :video="video" />
         </div>
       </div>
@@ -36,6 +40,8 @@
 </template>
 
 <script>
+import config from "~/assets/config";
+
 export default {
   name: "pornoSubpage",
   data() {
@@ -50,13 +56,12 @@ export default {
     };
   },
   async asyncData({ route, $axios, store }) {
+    const includeTags = config.tags.includeTags;
+    const excludeTags = config.tags.excludeTags;
     const pageNumber = parseInt(route.params.number);
-    const includeTags = store.state.includeTags;
-    const excludeTags = store.state.excludeTags;
-    console.log(includeTags, "dfadfsf");
-    let skip = store.state.limit * (pageNumber - 1);
-    let limit = store.state.limit;
-    const url = store.state.apiUrl + "/videos";
+    let skip = config.videos.limit * (pageNumber - 1);
+    let limit = config.videos.limit;
+    const url = config.apiUrl + "/videos";
     const params = {
       includeTags,
       excludeTags,
@@ -70,7 +75,7 @@ export default {
       return Error({ statusCode: 404, message: "No videos found!" });
     }
 
-    const nextPage = data.videos.length === store.state.limit;
+    const nextPage = data.videos.length === config.videos.limit;
     const videos = nextPage ? data.videos.slice(0, -1) : data.videos;
 
     return {
