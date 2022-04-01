@@ -16,8 +16,18 @@ const config = {
         limit: 80
     },
     categories: [
+        { name: 'Alt fickt Jung', tag: 'oldyoung', title: 'Alt fickt Jung Pornos', image: 'alt-fickt-jung.jpg' },
+        { name: 'Öffentlichkeit', tag: 'public', title: 'Pornos in der Öffentlichkeit', image: 'oeffentlichkeit.jpg' },
+        { name: 'Hentai', tag: 'hentai', title: 'Hentai Pornos', image: 'hentai.jpg' },
+        { name: 'Familie', tag: 'family', title: 'Familien Pornos', image: 'familie.jpg' },
+        { name: 'Natursekt', tag: 'pissing', title: 'Natursekt Pornos', image: 'natursekt.jpg' },
+        { name: 'Omas', tag: 'granny', title: 'Oma Pornos', image: 'oma.jpg' },
+        { name: 'Retro', tag: 'retro', title: 'Retro Pornos', image: 'retro.jpg' },
+        { name: 'Rothaarige', tag: 'redhead', title: 'Rothaarige Pornos', image: 'rothaarig.jpg' },
+        { name: 'Schwarze', tag: 'ebony', title: 'Schwarzen Pornos', image: 'schwarnze.jpg' },
         { name: 'Abspritzen', tag: 'cumshots', title: 'Abspritzen Pornos', image: 'abspritzen.jpg' },
         { name: 'Amateur', tag: 'amateur', title: 'Amateur Pornos', image: 'amateure.jpg' },
+        { name: 'Zeichentrick', tag: 'anime', title: 'Zeichentrick Pornos', image: 'zeichentrick.jpg' },
         { name: 'Arschficken', tag: 'anal', title: 'Arschfick Pornos', image: 'arschficken.jpg' },
         { name: 'Blasen', tag: 'blowjob', title: 'Blasen Pornos', image: 'blasen.jpg' },
         { name: 'Blondinen', tag: 'blonde', title: 'Blondinen Pornos', image: 'blondinen.jpg' },
