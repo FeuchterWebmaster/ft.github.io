@@ -20,7 +20,7 @@
             <li>
               <nuxt-link :to="`/tag/seite/${tag}/2/`" v-if="nextPage">
                 <button class="pageButtons buttons btn btn-primary">
-                  Next page
+                  Nächste Seite
                 </button>
               </nuxt-link>
             </li>

@@ -1,13 +1,20 @@
 <template>
   <div>
     <div class="card border-0">
-      <NuxtLink :to="`/porno/${video.germanSlug}/`" :title="video.title">
-        <img :src="`${video.mainThumb}`" class="thumbnail" :alt="video.title" />
+      <NuxtLink :to="`/porno/${video.germanSlug}/`" :title="video.germanTitle">
+        <img
+          :src="`/images/thumbs/${video.localThumb}`"
+          class="thumbnail"
+          :alt="video.germanTitle"
+        />
       </NuxtLink>
       <!-- <div class="card-body"> -->
       <h6 class="card-title">
-        <NuxtLink :to="`/porno/${video.germanSlug}/`" :title="video.title">
-          {{ video.title }}
+        <NuxtLink
+          :to="`/porno/${video.germanSlug}/`"
+          :title="video.germanTitle"
+        >
+          {{ video.germanTitle }}
         </NuxtLink>
       </h6>
       <!--

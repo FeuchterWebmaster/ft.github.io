@@ -1,8 +1,12 @@
 <template>
   <div>
     <div class="card">
-      <NuxtLink :to="`/porno/${link}/`" :title="video.title">
-        <img :src="video.mainThumb" class="thumbnail" :alt="video.title" />
+      <NuxtLink :to="`/porno/${link}/`" :title="video.germanTitle">
+        <img
+          :src="video.mainThumb"
+          class="thumbnail"
+          :alt="video.germanTitle"
+        />
         <!-- <div class="card-body">
         <h5 class="card-title">Card title</h5>
         <p class="card-text">

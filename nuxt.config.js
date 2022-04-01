@@ -18,7 +18,7 @@ export default {
             { hid: 'rating', name: 'RATING', content: 'RTA-5042-1996-1400-1577-RTA' }
         ],
         link: [
-            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+            { rel: 'icon', type: 'image/x-icon', href: '/favicon.gif' },
             { rel: 'stylesheet', href: '/css/bootstrap.min.css' }
         ],
         script: [{

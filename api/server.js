@@ -5,7 +5,7 @@ const { ObjectId } = require('mongodb')
 var cors = require('cors')
 
 
-const port = 3001
+const port = 3002
 const app = express()
 app.use(cors())
 const url = 'mongodb://127.0.0.1:27017'
@@ -59,8 +59,8 @@ app.get('/video', (req, res) => {
 })
 
 app.get('/video/slug', (req, res) => {
-    let germanSlug = req.query.slug
-    const video = videos.findOne({ germanSlug: germanSlug }, { projection: including }, (err, item) => {
+    const slug = req.query.slug
+    const video = videos.findOne({ germanSlug: slug }, { projection: including }, (err, item) => {
         if (err) {
             console.error(err)
         }

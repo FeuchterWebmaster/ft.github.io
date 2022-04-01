@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <nuxt-link class="navbar-brand" to="/">
+        <nuxt-link class="navbar-brand" to="/" :title="siteName">
           <img class="logo" src="/images/ft.png" :alt="siteName" />
         </nuxt-link>
         <button
@@ -19,13 +19,9 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link h3" aria-current="page" href="#">Start</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link h3" href="#">Kategorien</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link h3" href="#">Pornostars</a>
+              <nuxt-link class="nav-link h3" aria-current="page" to="/"
+                >Start</nuxt-link
+              >
             </li>
             <li class="nav-item dropdown">
               <a
@@ -53,6 +49,9 @@
                 </li>
               </ul>
             </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link h3" href="#">Pornostars</a>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -61,7 +60,7 @@
 </template>
 
 <script>
-import config from "~/assets/config.js";
+import config from "~/assets/config";
 
 export default {
   name: "Header",

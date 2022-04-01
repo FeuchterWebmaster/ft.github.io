@@ -2,6 +2,29 @@
   <div>
     <div class="container-fluid mt-5 px-4">
       <div class="row">
+        <div class="col-12">
+          <h2><span class="bigRedText"> Kategorien </span></h2>
+        </div>
+      </div>
+      <div class="row pt-2">
+        <div
+          v-for="(category, id) in categories"
+          :key="id"
+          class="col-xl-1 col-lg-2 col-md-3 col-sm-4"
+        >
+          <CategoryThumb :category="category" />
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid mt-5 px-4">
+      <div class="row">
+        <div class="col-12">
+          <h2><span class="bigRedText"> Neue Pornos </span></h2>
+        </div>
+      </div>
+
+      <div class="row pt-2">
         <div
           class="col-xl-1 col-lg-2 col-md-4 col-sm-4"
           v-for="(video, id) in videos"
@@ -17,14 +40,14 @@
             <li>
               <nuxt-link to="/seite/2/" v-if="nextPage">
                 <button class="pageButtons buttons btn btn-primary">
-                  Next page
+                  Nächste Seite
                 </button>
               </nuxt-link>
             </li>
           </ul>
         </div>
       </div>
-      <div class="row">
+      <div class="row pt-3">
         <div class="col-md-6 offset-md-3">
           <h1>Feuchte Tube - dein kostenloser Sender für deutsche Pornos</h1>
           <p>
@@ -127,9 +150,13 @@ export default {
     const data = await $axios.$get(url, { params });
     const nextPage = data.videos.length === config.videos.limit;
     const videos = nextPage ? data.videos.slice(0, -1) : data.videos;
+
+    const categories = config.categories;
+
     return {
       videos,
       nextPage,
+      categories,
     };
   },
 };

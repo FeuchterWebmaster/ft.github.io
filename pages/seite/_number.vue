@@ -21,14 +21,14 @@
             <li>
               <nuxt-link :to="prevLink"
                 ><button class="pageButtons buttons btn btn-primary">
-                  Prev page
+                  Vorige Seite
                 </button></nuxt-link
               >
             </li>
             <li>
               <nuxt-link v-if="nextPage" :to="`/seite/${pageNumber + 1}/`">
                 <button class="pageButtons buttons btn btn-primary">
-                  Next page
+                  Nächste Seite
                 </button>
               </nuxt-link>
             </li>
