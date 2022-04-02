@@ -45,8 +45,7 @@ const config = {
         { name: 'Jung', tag: 'teen', title: 'Pornos mit 18 jährigen', image: 'teens.jpg', publish: true },
         { name: 'Titten', tag: 'big-tits', title: 'Titten Pornos', image: 'titten.jpg', publish: true },
         { name: 'Zeichentrick', tag: 'anime', title: 'Zeichentrick Pornos', image: 'zeichentrick.jpg', publish: false },
-        { name: 'Hentai', tag: 'hentai', title: 'Hentai Pornos', image: 'hentai.jpg', publish: false },
-
+        { name: 'Hentai', tag: 'hentai', title: 'Hentai Pornos', image: 'hentai.jpg', publish: false }
     ]
 }
 

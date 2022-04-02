@@ -28,7 +28,7 @@
         </div>
       </div>
 
-      <SeoContent :content="textContent" />
+      <SeoContent :content="seoContent" />
     </div>
   </div>
 </template>
@@ -71,15 +71,15 @@ export default {
     const videos = nextPage ? data.videos.slice(0, -1) : data.videos;
 
     const category = config.categories.find((x) => x.tag === tag);
-    let textContent = content.find((x) => x.name === category.name);
-
-    textContent = textContent ? textContent : "";
+    const seoContent = category
+      ? content.find((x) => x.name === category.name)
+      : false;
 
     return {
       videos,
       nextPage,
       tag,
-      textContent,
+      seoContent,
     };
   },
 };
