@@ -66,7 +66,7 @@ export default {
   name: "Header",
   data: () => ({
     siteName: config.siteName,
-    categories: config.categories,
+    categories: config.categories.filter((x) => x.publish),
   }),
 };
 </script>

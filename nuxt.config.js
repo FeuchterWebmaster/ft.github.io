@@ -12,7 +12,7 @@ export default {
         meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-            { hid: 'description', name: 'description', content: config.meta.metaDescription },
+            { hid: 'description', name: 'description', content: config.meta.description },
             { name: 'format-detection', content: 'telephone=no' },
             { hid: 'keywords', name: 'keywords', content: config.meta.keywords },
             { hid: 'rating', name: 'RATING', content: 'RTA-5042-1996-1400-1577-RTA' }

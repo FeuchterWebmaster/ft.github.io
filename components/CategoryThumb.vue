@@ -11,7 +11,7 @@
       <!-- <div class="card-body"> -->
       <h6 class="card-title">
         <NuxtLink :to="`/tag/${category.tag}/`" :title="category.title">
-          {{ category.title }}
+          {{ category.name }}
         </NuxtLink>
       </h6>
       <!--

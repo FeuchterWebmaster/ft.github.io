@@ -27,12 +27,15 @@
           </ul>
         </div>
       </div>
+
+      <SeoContent :content="textContent" />
     </div>
   </div>
 </template>
 
 <script>
 import config from "~/assets/config";
+import content from "~/assets/content";
 
 export default {
   name: "tag",
@@ -66,10 +69,17 @@ export default {
     const data = await $axios.$get(url, { params });
     const nextPage = data.videos.length === config.videos.limit;
     const videos = nextPage ? data.videos.slice(0, -1) : data.videos;
+
+    const category = config.categories.find((x) => x.tag === tag);
+    let textContent = content.find((x) => x.name === category.name);
+
+    textContent = textContent ? textContent : "";
+
     return {
       videos,
       nextPage,
       tag,
+      textContent,
     };
   },
 };
