@@ -33,7 +33,7 @@ const config = {
         { name: 'Mütter', tag: 'milf', title: 'Mutter Pornos', image: 'muetter.jpg', publish: true },
         { name: 'Natursekt', tag: 'pissing', title: 'Natursekt Pornos', image: 'natursekt.jpg', publish: true },
         { name: 'Öffentlichkeit', tag: 'public', title: 'Pornos in der Öffentlichkeit', image: 'oeffentlichkeit.jpg', publish: true },
-        { name: 'Omas', tag: 'granny', title: 'Oma Pornos', image: 'oma.jpg', publish: true },
+        { name: 'Omasex', tag: 'granny', title: 'Omasex Pornos', image: 'oma.jpg', publish: true },
         { name: 'Gruppensex', tag: 'groupsex', title: 'Gruppensex Pornos', image: 'gruppensex.jpg', publish: true },
         { name: 'Pornostars', tag: 'pornstar', title: 'Pornos mit Pornostars', image: 'pornostars.jpg', publish: true },
         { name: 'Retro', tag: 'retro', title: 'Retro Pornos', image: 'retro.jpg', publish: true },
