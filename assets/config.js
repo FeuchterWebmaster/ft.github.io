@@ -18,7 +18,7 @@ const config = {
     categories: [
         { name: 'Abspritzen', tag: 'cumshots', title: 'Abspritzen Pornos', image: 'abspritzen-pornos.jpg', publish: false, metaDescription: 'Deutsche Frauen schlucken in diesen geilen Tube Videos. Geile Abspritz Pornos zum kostenlosen anschauen ohne Anmeldung.' },
 
-        { name: 'Alt fickt Jung', tag: 'oldyoung', title: 'Alt fickt Jung Pornos', image: 'alt-fickt-jung-pornos.jpg', publish: true, metaDescription: 'In diesen deutschen Pornos siehst du Alt und Jung beim Ficken. Alte Opas ficken junge Teens und junge Männer bumsen alte Omas. Pornos mit Altersunterschied.' },
+        { name: 'Alt fickt Jung', tag: 'old-young', title: 'Alt fickt Jung Pornos', image: 'alt-fickt-jung-pornos.jpg', publish: true, metaDescription: 'In diesen deutschen Pornos siehst du Alt und Jung beim Ficken. Alte Opas ficken junge Teens und junge Männer bumsen alte Omas. Pornos mit Altersunterschied.' },
 
         { name: 'Amateur', tag: 'amateur', title: 'Amateur Pornos', image: 'amateure-pornos.jpg', publish: true, metaDescription: 'Feuchte Amateur Mädchen zeigen dir alles in diesen kostenlosen Pornos. Tabulose Girls rund um die Uhr. Dein gratis Porno-Sender.' },
 
