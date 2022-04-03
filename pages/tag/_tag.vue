@@ -2,7 +2,12 @@
   <div>
     <div class="container-fluid mt-5 px-4">
       <div class="col-md-12 text-center">
-        <h1>{{ tag }} Pornos - Seite 1</h1>
+        <div class="h1" v-if="seoContent">
+          <span class="bigRedText">{{ tag }} Pornos</span>
+        </div>
+        <h1 class="h1" v-else>
+          <span class="bigRedText">{{ tag }} Pornos</span>
+        </h1>
       </div>
       <div class="row">
         <div

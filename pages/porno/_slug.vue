@@ -13,14 +13,16 @@
               style="max-width: 100%; height: 100%"
             ></iframe>
           </div>
-          <nuxt-link
-            v-for="(tag, id) in video.tags"
-            :key="id"
-            :to="`/tag/${tag}/`"
-            :title="`${tag} Pornos`"
-          >
-            <span class="tag"> {{ tag }} </span></nuxt-link
-          >
+          <div class="pt-2">
+            <nuxt-link
+              v-for="(tag, id) in video.tags"
+              :key="id"
+              :to="`/tag/${tag}/`"
+              :title="`${tag} Pornos`"
+            >
+              <span class="tag"> {{ tag }} </span></nuxt-link
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -64,6 +66,11 @@ export default {
           name: "description",
           content:
             this.title.substring(0, 130) + " - Porno auf " + this.siteName,
+        },
+        {
+          hid: "robots",
+          name: "robots",
+          cntent: "noindex, follow",
         },
       ],
     };

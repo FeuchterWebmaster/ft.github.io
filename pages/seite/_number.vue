@@ -1,11 +1,11 @@
 <template>
   <div>
     <div class="container-fluid mt-5 px-4">
-      <!-- <div class="row align-items-center">
-        <div class="col-md-3 offset-md-4">
-          <h1 class="text-center">{{ pageNumber }}</h1>
+      <div class="col-md-12 text-center">
+        <div class="h1">
+          <span class="bigRedText">Neue Pornos - Seite {{ pageNumber }}</span>
         </div>
-      </div> -->
+      </div>
       <div class="row">
         <div
           class="col-xl-1 col-lg-2 col-md-4 col-sm-4"

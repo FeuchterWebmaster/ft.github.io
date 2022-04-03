@@ -2,8 +2,8 @@
   <div>
     <div class="container-fluid mt-5 px-4">
       <div class="row">
-        <div class="col-12">
-          <h2><span class="bigRedText"> Kategorien </span></h2>
+        <div class="col-md-12 text-center">
+          <div class="h2"><span class="bigRedText"> Kategorien </span></div>
         </div>
       </div>
       <div class="row pt-2">
@@ -19,8 +19,8 @@
 
     <div class="container-fluid mt-5 px-4">
       <div class="row">
-        <div class="col-12">
-          <h2><span class="bigRedText"> Neue Pornos </span></h2>
+        <div class="col-md-12 text-center">
+          <div class="h2"><span class="bigRedText"> Neue Pornos </span></div>
         </div>
       </div>
 

@@ -2,7 +2,9 @@
   <div>
     <div class="container-fluid mt-5 px-4">
       <div class="col-md-12 text-center">
-        <h1>{{ tag }} Pornos - Seite {{ pageNumber }}</h1>
+        <div class="h1">
+          <span class="bigRedText">{{ tag }} Pornos</span>
+        </div>
       </div>
       <div class="row">
         <div

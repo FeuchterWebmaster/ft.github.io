@@ -25,7 +25,7 @@
           <ul class="navbar-nav">
             <li class="nav-item">
               <nuxt-link class="nav-link h3" aria-current="page" to="/"
-                >Start</nuxt-link
+                >Alle Pornos</nuxt-link
               >
             </li>
             <li class="nav-item dropdown">
