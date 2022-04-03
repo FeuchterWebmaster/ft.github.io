@@ -41,13 +41,26 @@ export default {
   name: "tag",
   data: () => ({}),
   head() {
+    const category = config.categories.find(
+      (x) => x.tag === this.$route.params.tag
+    );
+
     return {
-      title: `${this.tag} Pornos | Feuchte Tube`,
+      title: category
+        ? category.title
+        : `${this.$route.params.tag} Pornos auf Feuchte Tube`,
       meta: [
         {
           hid: "description",
           name: "description",
-          content: `Kostenlos ${this.tag} Pornos auf Feuchte Tube anschauen. Deutsche Pornos mit dem Stichwort ${this.tag}. Es werden jeden Tag neue ${this.tag} Videos hochgeladen.`,
+          content: category
+            ? category.metaDescription
+            : `${this.$route.params.tag} Pornos kostenlos auf Feuchte Tube anschauen. Täglich neue ${this.$route.params.tag} Pornos für dich ohne Registrierung, auch auf dem Handy.`,
+        },
+        {
+          hid: "robots",
+          name: "robots",
+          content: category ? "index, follow" : "noindex, follow",
         },
       ],
     };
