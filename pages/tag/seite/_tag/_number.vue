@@ -62,7 +62,7 @@ export default {
     const tag = route.params.tag;
     includeTags.push(tag);
     const pageNumber = parseInt(route.params.number);
-    const skip = config.videos.limit * (pageNumber - 1);
+    const skip = pageNumber ? config.videos.limit * (pageNumber - 1) : 0;
     const limit = config.videos.limit;
     const url = config.apiUrl + "/videos";
     const params = {
