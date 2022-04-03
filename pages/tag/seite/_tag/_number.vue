@@ -57,12 +57,14 @@ export default {
     };
   },
   async asyncData({ route, $axios, store }) {
-    const includeTags = config.tags.includeTags;
-    const excludeTags = config.tags.excludeTags;
+    // const includeTags = config.tags.includeTags;
+    // const excludeTags = config.tags.excludeTags;
+    const includeTags = ["german"];
+    const excludeTags = ["gay"];
     const tag = route.params.tag;
     includeTags.push(tag);
     const pageNumber = parseInt(route.params.number);
-    const skip = pageNumber ? config.videos.limit * (pageNumber - 1) : 0;
+    const skip = pageNumber >= 0 ? config.videos.limit * (pageNumber - 1) : 0;
     const limit = config.videos.limit;
     const url = config.apiUrl + "/videos";
     const params = {

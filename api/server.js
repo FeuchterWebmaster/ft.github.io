@@ -38,6 +38,13 @@ app.get('/videos', (req, res) => {
     const order = { _id: -1 }
     const myFilter = { tags: { $all: includeTags, $nin: excludeTags } }
 
+    // console.log("\n\n", includeTags, "include")
+    // console.log(excludeTags, "exclude")
+    // console.log(skip, "skip")
+    // console.log(limit, "limit")
+    // console.log(order, "order")
+    // console.log(myFilter, "myfilter")
+
     videos.find(myFilter).project(including).sort(order).limit(limit).skip(skip).toArray((err, items) => {
         if (err) {
             console.error(err)

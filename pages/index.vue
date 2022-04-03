@@ -61,8 +61,10 @@ export default {
   head: {},
   data: () => ({}),
   async asyncData({ $axios, store }) {
-    const includeTags = config.tags.includeTags;
-    const excludeTags = config.tags.excludeTags;
+    // const includeTags = config.tags.includeTags;
+    // const excludeTags = config.tags.excludeTags;
+    const includeTags = ["german"];
+    const excludeTags = ["gay"];
     const skip = 0;
     const limit = config.videos.limit;
     const url = config.apiUrl + "/videos";

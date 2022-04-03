@@ -66,8 +66,10 @@ export default {
     };
   },
   async asyncData({ $axios, store, route }) {
-    const includeTags = config.tags.includeTags;
-    const excludeTags = config.tags.excludeTags;
+    // const includeTags = config.tags.includeTags;
+    // const excludeTags = config.tags.excludeTags;
+    const includeTags = ["german"];
+    const excludeTags = ["gay"];
     const tag = route.params.tag;
     includeTags.push(tag);
     const skip = 0;

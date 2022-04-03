@@ -125,6 +125,7 @@ export default {
     },
 
     generate: {
+        crawler: true,
         dir: 'docs/',
         fallback: '404.html'
     }

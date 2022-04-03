@@ -56,8 +56,10 @@ export default {
     };
   },
   async asyncData({ route, $axios, store }) {
-    const includeTags = config.tags.includeTags;
-    const excludeTags = config.tags.excludeTags;
+    // const includeTags = config.tags.includeTags;
+    // const excludeTags = config.tags.excludeTags;
+    const includeTags = ["german"];
+    const excludeTags = ["gay"];
     const pageNumber = parseInt(route.params.number);
     let skip = config.videos.limit * (pageNumber - 1);
     let limit = config.videos.limit;
