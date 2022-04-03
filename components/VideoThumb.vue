@@ -9,14 +9,14 @@
         />
       </NuxtLink>
       <!-- <div class="card-body"> -->
-      <h6 class="card-title">
+      <span class="h6 card-title">
         <NuxtLink
           :to="`/porno/${video.germanSlug}/`"
           :title="video.germanTitle"
         >
           {{ video.germanTitle }}
         </NuxtLink>
-      </h6>
+      </span>
       <!--
         <p class="card-text">
           Some quick example text to build on the card title and make up the

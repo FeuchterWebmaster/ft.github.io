@@ -47,8 +47,8 @@ export default {
 
     return {
       title: category
-        ? category.title
-        : `${this.$route.params.tag} Pornos auf Feuchte Tube`,
+        ? `${category.title} | Feuchte Tube`
+        : `${this.$route.params.tag} Pornos | Feuchte Tube`,
       meta: [
         {
           hid: "description",
