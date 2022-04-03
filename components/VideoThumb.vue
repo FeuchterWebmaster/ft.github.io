@@ -2,7 +2,8 @@
   <div>
     <div class="card border-0">
       <NuxtLink :to="`/porno/${video.germanSlug}/`" :title="video.germanTitle">
-        <img
+        <nuxt-img
+          preset="videoThumbnail"
           :src="`/images/thumbs/${video.localThumb}`"
           class="thumbnail"
           :alt="video.germanTitle"

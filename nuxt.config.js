@@ -42,16 +42,22 @@ export default {
     components: true,
 
     // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-    buildModules: [],
+    buildModules: [
+        '@nuxt/image'
+    ],
 
     // Modules: https://go.nuxtjs.dev/config-modules
     modules: [
         '@nuxtjs/axios',
-        '@nuxtjs/sitemap'
+        '@nuxtjs/sitemap',
+        '@nuxt/image',
     ],
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {
+        filenames: {
+            img: '[path][name].[ext]',
+        },
         parallel: true,
         cache: true,
         hardSource: true,
@@ -70,9 +76,9 @@ export default {
         }
     },
 
-    env: {
-        baseURL: (process.env.NODE_ENV === 'production' ? config.baseURL : 'http://localhost:3000')
-    },
+    // env: {
+    //     baseURL: (process.env.NODE_ENV === 'production' ? config.baseURL : 'http://localhost:3000')
+    // },
 
     // @nuxtjs/sitemap configuration
     sitemap: {
@@ -86,6 +92,32 @@ export default {
             '/tag/seite/**'
 
         ]
+    },
+
+    image: {
+        presets: {
+            categoryThumbnail: {
+                modifiers: {
+                    format: 'webp',
+                    quality: 80,
+                    img: 'img/categories/[name].[ext]'
+                }
+            },
+            videoThumbnail: {
+                modifiers: {
+                    format: 'webp',
+                    quality: 80,
+                    img: 'img/thumbnails/[name].[ext]'
+                }
+            },
+            logo: {
+                modifiers: {
+                    format: 'webp',
+                    quality: 80,
+                    img: 'img/logo/[name].[ext]'
+                }
+            },
+        }
     },
 
     router: {

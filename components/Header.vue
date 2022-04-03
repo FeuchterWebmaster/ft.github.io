@@ -3,7 +3,12 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <nuxt-link class="navbar-brand" to="/" :title="siteName">
-          <img class="logo" src="/images/ft.png" :alt="siteName" />
+          <nuxt-img
+            preset="logo"
+            class="logo"
+            src="/images/ft.png"
+            :alt="siteName"
+          />
         </nuxt-link>
         <button
           class="navbar-toggler ms-auto"
@@ -37,7 +42,7 @@
                 class="dropdown-menu"
                 aria-labelledby="navbarDropdownMenuLink"
               >
-                <li><a href="" class="dropdown-item h3">Alle</a></li>
+                <!-- <li><a href="" class="dropdown-item h3">Alle</a></li> -->
                 <li v-for="(category, id) in categories" :key="id">
                   <nuxt-link
                     class="dropdown-item h3"

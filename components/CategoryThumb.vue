@@ -2,7 +2,8 @@
   <div>
     <div class="card border-0">
       <NuxtLink :to="`/tag/${category.tag}/`" :title="category.title">
-        <img
+        <nuxt-img
+          preset="categoryThumbnail"
           :src="`images/categories/${category.image}`"
           class="thumbnail"
           :alt="category.title"
