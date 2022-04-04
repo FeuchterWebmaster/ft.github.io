@@ -61,6 +61,7 @@ export default {
   async asyncData({ route, $axios, store }) {
     // const includeTags = config.tags.includeTags;
     // const excludeTags = config.tags.excludeTags;
+    const maximalPaginationSize = config.videos.maximalPaginationSize;
     const includeTags = ["german"];
     const excludeTags = ["gay"];
     const tag = route.params.tag;
@@ -81,7 +82,9 @@ export default {
       return Error({ statusCode: 404, message: "No videos found!" });
     }
 
-    const nextPage = data.videos.length === config.videos.limit;
+    const nextPage =
+      data.videos.length === config.videos.limit &&
+      pageNumber <= maximalPaginationSize;
     const videos = nextPage ? data.videos.slice(0, -1) : data.videos;
 
     return {

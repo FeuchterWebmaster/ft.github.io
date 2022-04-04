@@ -13,7 +13,8 @@ const config = {
         excludeTags: ["gay"]
     },
     videos: {
-        limit: 80
+        limit: 80,
+        maximalPaginationSize: 50
     },
     categories: [
         { name: 'Abspritzen', tag: 'cumshots', title: 'Abspritzen Pornos', image: 'abspritzen-pornos.jpg', publish: false, metaDescription: 'Deutsche Frauen schlucken in diesen geilen Tube Videos. Geile Abspritz Pornos zum kostenlosen anschauen ohne Anmeldung.' },

@@ -3,7 +3,7 @@
     <div class="container-fluid mt-5 px-4">
       <div class="col-md-12 text-center">
         <div class="h1" v-if="seoContent">
-          <span class="bigRedText">{{ tag }} Pornos</span>
+          <span class="bigRedText">{{ tag.replace("-", " ") }} Pornos</span>
         </div>
         <h1 class="h1" v-else>
           <span class="bigRedText">{{ tag }} Pornos</span>
@@ -60,7 +60,13 @@ export default {
           name: "description",
           content: category
             ? category.metaDescription
-            : `${this.$route.params.tag} Pornos kostenlos auf Feuchte Tube anschauen. Täglich neue ${this.$route.params.tag} Pornos für dich ohne Registrierung, auch auf dem Handy.`,
+            : `${this.$route.params.tag.replace(
+                "-",
+                " "
+              )} Pornos kostenlos auf Feuchte Tube anschauen. Täglich neue ${this.$route.params.tag.replace(
+                "-",
+                " "
+              )} Pornos für dich ohne Registrierung, auch auf dem Handy.`,
         },
         {
           hid: "robots",

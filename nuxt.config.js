@@ -55,11 +55,8 @@ export default {
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {
-        publicPath: '/',
-        filenames: {
-            img: '[path][name].[ext]',
-        },
-        parallel: true,
+        publicPath: '/assets/',
+        // parallel: true,
         cache: true,
         hardSource: true,
         html: {
@@ -96,26 +93,25 @@ export default {
     },
 
     image: {
+        staticFilename: '[publicPath]/images/[name]-[hash][ext]',
+        provider: 'static',
         presets: {
             categoryThumbnail: {
                 modifiers: {
                     format: 'webp',
                     quality: 80,
-                    img: 'img/categories/[name].[ext]'
                 }
             },
             videoThumbnail: {
                 modifiers: {
                     format: 'webp',
-                    quality: 80,
-                    img: 'img/thumbnails/[name].[ext]'
+                    quality: 80
                 }
             },
             logo: {
                 modifiers: {
                     format: 'webp',
-                    quality: 80,
-                    img: 'img/logo/[name].[ext]'
+                    quality: 80
                 }
             },
         }
@@ -126,7 +122,9 @@ export default {
     },
 
     generate: {
-        crawler: true,
+        workers: 4,
+        workerConcurrency: 500,
+        concurrency: 500,
         dir: 'docs/',
         fallback: '404.html'
     }
