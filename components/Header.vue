@@ -6,7 +6,7 @@
           <nuxt-img
             preset="logo"
             class="logo"
-            src="/images/ft.png"
+            src="/images/feuchte-tube.png"
             :alt="siteName"
           />
         </nuxt-link>
