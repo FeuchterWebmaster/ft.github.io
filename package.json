@@ -6,7 +6,8 @@
         "dev": "nuxt",
         "build": "nuxt build",
         "start": "nuxt start",
-        "generate": "nuxt generate"
+        "generate": "nuxt generate",
+        "deploy": "git rm -rf /docs/ && time npm run generate && cp CNAME docs/ && rm -rf docs/images/* && git add docs/ && git commit -am 'production deployment' && git push"
     },
     "dependencies": {
         "@nuxtjs/axios": "^5.13.6",

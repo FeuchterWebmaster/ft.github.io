@@ -49,7 +49,7 @@ export default {
     // Modules: https://go.nuxtjs.dev/config-modules
     modules: [
         '@nuxtjs/axios',
-        '@nuxtjs/sitemap',
+        // '@nuxtjs/sitemap',
         '@nuxt/image',
     ],
 
@@ -79,18 +79,18 @@ export default {
     // },
 
     // @nuxtjs/sitemap configuration
-    sitemap: {
-        gzip: true,
-        hostname: config.baseURL,
-        routes: [],
-        trailingSlash: true,
-        exclude: [
-            '/seite/**',
-            '/porno/**',
-            '/tag/seite/**'
+    // sitemap: {
+    //     gzip: true,
+    //     hostname: config.baseURL,
+    //     routes: [],
+    //     trailingSlash: true,
+    //     exclude: [
+    //         '/seite/**',
+    //         '/porno/**',
+    //         '/tag/seite/**'
 
-        ]
-    },
+    //     ]
+    // },
 
     image: {
         staticFilename: '[publicPath]/images/[name]-[hash][ext]',
