@@ -53,9 +53,7 @@ export default {
   head() {
     return {
       title: `${this.tag} Pornos - Seite ${this.pageNumber}`,
-      meta: [
-        { hid: "robots", name: "description", content: "noindex, follow" },
-      ],
+      meta: [{ hid: "robots", name: "robots", content: "noindex, follow" }],
     };
   },
   async asyncData({ route, $axios, store }) {
