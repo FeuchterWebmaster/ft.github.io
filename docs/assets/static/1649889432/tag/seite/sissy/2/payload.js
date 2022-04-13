@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/tag/seite/sissy/2", {data:[{_img:{"/_ipx/f_webp,q_80/images/feuchte-tube.png":"\u002Fassets\u002Fimages\u002Ffeuchte-tube-c694c1.webp"}}],fetch:{},mutations:[]});
