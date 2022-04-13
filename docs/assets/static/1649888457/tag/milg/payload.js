@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/tag/milg", (function(a){return {data:[{videos:[],nextPage:a,tag:"milg",seoContent:a,_img:{"/_ipx/f_webp,q_80/images/feuchte-tube.png":"\u002Fassets\u002Fimages\u002Ffeuchte-tube-c694c1.webp"}}],fetch:{},mutations:[]}}(false)));

@@ -51,7 +51,7 @@ export default {
     return {
       title: `Deutsche Pornos - Seite ${this.pageNumber}`,
       meta: [
-        { hid: "robots", name: "description", content: "noindex, follow" },
+        { hid: "robots", name: "robots", content: "noindex, follow" },
       ],
     };
   },
