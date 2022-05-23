@@ -9,6 +9,8 @@ const port = 3002
 const app = express()
 app.use(cors())
 const url = 'mongodb://127.0.0.1:27017'
+const dbName = "feuchtetubenet"
+const tableName = 'embed'
 let db
 let videos
 const including = { mainThumb: 1, tags: 1, iframeSrc: 1, localThumb: 1, germanTitle: 1, germanSlug: 1 }
@@ -25,8 +27,8 @@ mongo.connect(
             console.error(err)
             return
         }
-        db = client.db("porndb")
-        videos = db.collection("embed")
+        db = client.db(dbName)
+        videos = db.collection(tableName)
     }
 )
 

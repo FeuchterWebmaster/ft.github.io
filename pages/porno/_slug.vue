@@ -70,7 +70,7 @@ export default {
         {
           hid: "robots",
           name: "robots",
-          content: "noindex, follow",
+          content: "index, follow",
         },
       ],
     };
